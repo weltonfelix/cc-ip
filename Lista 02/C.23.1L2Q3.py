@@ -1,8 +1,8 @@
-EVENT_END = "O InterCIn acabou!!! Vamos ver nosso estoque de bebidas"
-MATCH_END = "Acabou uma partida e os alunos estão com MUITA sede, segue a quantidade de jogadores"
-MATCH_START = "Encham o cooler, vai começar um jogo!!!!"
+EVENT_END = "O InterCIn acabou!!! Vamos verificar nosso estoque de bebidas"
+MATCH_END = "Acabou uma partida e precisamos da seguinte quantidade de garrafas para matar a sede dos jogadores"
+MATCH_START = "Encham o cooler! O jogo vai começar!!!!"
 MATCH_TIMEOUT = (
-    "Timeout da partida, vamos ver quantas garrafas pediram a cada voluntário"
+    "Timeout da partida! Verifiquem quantas garrafas pediram aos voluntários"
 )
 
 bottles = 20
@@ -31,14 +31,14 @@ while status != EVENT_END and bottles >= 0:
             bottles -= int(input())
 
         if bottles < 0:
-            print(f"Prometemos distribuir {-bottles} garrafas e zeramos")
+            print(
+                f"Faltaram {-bottles} garrafas para atender o pedido feito aos voluntários"
+            )
 
     if bottles < 0:
         print("Por questões logísticas, teremos que acabar com os jogos...")
 
 if bottles > 0:
-    print(f"Notícia boa: sobraram {bottles} garrafas, vamos guardar na geladeira :D")
+    print(f"Sobraram {bottles} garrafas, vamos guardar na geladeira :D")
 elif bottles == 0:
-    print("Vendemos todas as águas, fizemos uma contagem certeira!!")
-else:
-    print(f"Estamos devendo {-bottles} garrafas para os alunos...")
+    print("Vendemos todas as garrafas! Nosso planejamento foi perfeito!")
