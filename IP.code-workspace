@@ -15,6 +15,10 @@
     {
       "name": "Tudo",
       "path": "."
+    },
+    {
+      "name": "Lista 03",
+      "path": "Lista 03"
     }
   ],
   "settings": {
